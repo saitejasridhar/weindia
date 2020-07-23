@@ -1,13 +1,3 @@
-$('.burger, .overlay').click(function(){
-  $('.burger').toggleClass('clicked');
-  $('.overlay').toggleClass('show');
-  $('nav').toggleClass('show');
-  $('body').toggleClass('overflow');
-});
-
-
-myCanvas = document.getElementById("can");
-
 
 
 triangleslist=[];
@@ -45,7 +35,6 @@ function InitialiseScene() {
   WIDTH = window.innerWidth;
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x1b232e);
   aspectRatio = WIDTH / HEIGHT;
   fieldOfView = 60;
   nearPlane = 1;
@@ -57,15 +46,15 @@ function InitialiseScene() {
     farPlane
     );
   scene.fog = new THREE.Fog(0xf7d9aa, 100,950);
-  camera.position.x = 170;
-  camera.position.z = 250;
+  camera.position.x = 0;
+  camera.position.z = 200;
   camera.position.y = 0;
 
-  renderer = new THREE.WebGLRenderer({antialias: true, canvas: myCanvas});
+  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setSize(WIDTH, HEIGHT);
   renderer.shadowMap.enabled = true;
   container = document.getElementById('world');
- 
+  container.appendChild(renderer.domElement);
 
   window.addEventListener('resize', handleWindowResize, false);
 }
@@ -187,7 +176,6 @@ function normalize(v,vmin,vmax,tmin, tmax){
 }
 
 function init(event){
-
   document.addEventListener('mousemove', handleMouseMove, false);
    InitialiseScene();
    addLights();
@@ -199,9 +187,9 @@ function init(event){
 var mousePos = { x: 0, y: 0 };
 
 function handleMouseMove(event) {
-  // var tx = -1 + (event.clientX / WIDTH)*2;
-  // var ty = 1 - (event.clientY / HEIGHT)*2;
-  // mousePos = {x:tx, y:ty};
+  var tx = -1 + (event.clientX / WIDTH)*2;
+  var ty = 1 - (event.clientY / HEIGHT)*2;
+  mousePos = {x:tx, y:ty};
 
 
 }
