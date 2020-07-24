@@ -1047,5 +1047,10 @@ h1
   transform: translateX(0);
 }
 
+.horizontal-scroll-section__content-section span
+{
+  line-height: 1px;
+}
+
 
 
