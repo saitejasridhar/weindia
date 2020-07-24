@@ -1,4 +1,5 @@
 
+
 *,
 *:before,
 *:after {
@@ -7,12 +8,11 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-}
+
 body.overflow {
   overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /*  BURGER
@@ -24,7 +24,7 @@ body.overflow {
   top: 20px;
   right: 20px;
   border-radius: 4px;
-  z-index: 10;
+  z-index: 100;
 }
 .burger span {
   position: relative;
@@ -44,7 +44,7 @@ body.overflow {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #2a2a2a;
+  background-color: #fff;
   outline: 1px solid transparent;
   -webkit-transition-property: background-color, -webkit-transform;
   -moz-transition-property: background-color, -moz-transform;
@@ -94,7 +94,7 @@ body.overflow {
 nav {
   background-color: #2a2a2a;
   position: fixed;
-  z-index: 9;
+  z-index: 99;
   top: 0;
   right: 0;
   height: 100%;
@@ -190,8 +190,8 @@ nav ul.main li:last-of-type {
   margin-bottom: 0px;
 }
 nav ul.main li a {
-  color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -208,7 +208,7 @@ nav ul.main li a span {
   color: #b7ac7f;
 }
 nav ul.main li a:hover {
-  color: #b7ac7f;
+  color: rgb(245,189,69);
 }
 nav .about {
   margin-top: 40px;
@@ -225,7 +225,7 @@ nav .about {
 }
 nav .about p {
   color: #ffffff;
-  font-family: "Spectral", serif;
+   font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
   line-height: 170%;
@@ -301,7 +301,7 @@ nav ul.sub li:last-of-type {
 }
 nav ul.sub li a {
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   font-size: 0.9rem;
   text-decoration: none;
@@ -327,7 +327,7 @@ nav ul.sub li a:hover {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #b7ac7f;
+  background-color: #fff;
   opacity: 0;
   visibility: hidden;
 }
@@ -337,3 +337,86 @@ nav ul.sub li a:hover {
 }
 
 
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+margin-top: 50px; 
+font-family: 'Roboto';
+
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
+#polina {
+
+margin-top:200px; 
+  font-weight: 100;
+/*  background: rgba(245, 188, 69,0.5);*/
+  background: rgba(0, 0, 0,0.4);
+  line-height: 2em;
+  color: white;
+  padding: 2rem;
+  width: 53%;
+  margin: 2rem;
+
+  float: right;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+h2
+{
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 414px) {
+  div {
+    width: 70%;
+  }
+  #polina
+  {
+    height: 100%;
+    width: 80%;
+      margin: 1rem;
+        font-size: 1rem;
+          padding: 1rem;
+  }
+
+  h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+}
+
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
+  }
+}

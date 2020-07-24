@@ -1,4 +1,37 @@
 
+
+.wrapper1 {
+  max-width:1000px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wrapper1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper1 .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  padding: 10%;
+  box-sizing: border-box;
+}
+
+.wrapper1::before {
+  content: " ";
+  background: rgb(209,82,47);
+  opacity:0.8;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
 *,
 *:before,
 *:after {
@@ -353,6 +386,9 @@ nav ul.sub li a:hover {
 
 
 
+
+
+
 * {
   padding: 0;
   margin: 0;
@@ -410,8 +446,9 @@ main {
 
 canvas
 {
-
+margin-top: 120px;
   margin-left: -150px;
+ 
 }
 
 @media screen and (max-width: 414px) {
@@ -428,6 +465,15 @@ canvas
     height: 50%;
     text-align: center;
     padding-left: 0.6rem;
+  }
+  canvas
+  {
+
+  	display: block;
+  	width: 414px;
+  	height: 10px;
+
+
   }
   main .l-heading {
     font-size: 2rem;
@@ -752,8 +798,7 @@ footer{
 .main-container {
   margin-top: 1%;
   padding-top: 8px;
-background-image: url(/Users/saiteja/Desktop/back.png);
-  background-color: rgb(15,32,44);
+background-image: url(/Users/saiteja/Desktop/ba.png);
   height: 80%;
   background-size: cover;
   background-position: center center;
@@ -775,6 +820,10 @@ background-image: url(/Users/saiteja/Desktop/back.png);
   margin-left: -15px;
 }
 
+h1
+{
+	font-size: 65px;
+}
 
 p {
   font-weight: 300;
@@ -883,13 +932,28 @@ i:before {
 @media screen and (max-width: 414px) {
 
 
+
 .col-12 {
   width: 100%;
 }
 
-
-
+.centering-container
+{
+  width: 100%;
+  height: 50%;
+}
+.main-container {
+	font-size: 2rem;
+	background-image: url();
+width: 100%;
+overflow-x: hidden;
   }
+h1
+{
+	font-size: 40px;
+}
+}
+
 
 
 
@@ -954,7 +1018,7 @@ i:before {
 }
 .horizontal-scroll-section__content-section {
   position: relative;
-  min-width: 60vw;
+  min-width: 55vw;
   text-align: center;
   padding: 0 40px;
   height: 100%;

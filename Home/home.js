@@ -6,6 +6,9 @@ $('.burger, .overlay').click(function(){
 });
 
 
+
+
+
 var delay = ( function() {
     var timer = 0;
     return function(callback, ms) {
@@ -198,6 +201,15 @@ var delay = ( function() {
 
 
 myCanvas = document.getElementById("can");
+
+window.addEventListener('resize', resizeCanvas, false);
+
+   /// call the first time page is loaded
+
+function resizeCanvas() {
+    myCanvas.width = window.innerWidth;
+    myCanvas.height = window.innerHeight;
+}
 
 
 geometry = new THREE.Geometry();
@@ -432,9 +444,18 @@ target_vertex=[
 
     }
 
+// function handleWindowResize() {
+//   HEIGHT = window.innerHeight;
+//   WIDTH = window.innerWidth;
+//   renderer.setSize(WIDTH, HEIGHT);
+//   camera.aspect = WIDTH / HEIGHT;
+//   camera.updateProjectionMatrix();
+// }
   // set up the environment -
     // initiallize scene, camera, objects and renderer
     let init = function() {
+
+resizeCanvas(); 
         // create the scene
         scene = new THREE.Scene();
         scene.background = new THREE.Color(0x0f202c);
@@ -450,7 +471,7 @@ target_vertex=[
 
         // create the renderer
         renderer = new THREE.WebGLRenderer({antialias: true, canvas: myCanvas});
-        renderer.setSize(window.innerWidth*0.70,window.innerHeight*0.7);
+        renderer.setSize(window.innerWidth*0.7,window.innerHeight*0.7);
 
         lights = new THREE.PointLight( 0xFFA500,1);
         lights.position.set( 40,50,140);
@@ -462,9 +483,23 @@ target_vertex=[
 
     };
 
+    function handleWindowResize() {
+  console.log("Hello");
+  HEIGHT = window.innerHeight;
+  WIDTH = window.innerWidth;
+  renderer.setSize(WIDTH, HEIGHT);
+  camera.aspect = WIDTH / HEIGHT;
+  camera.updateProjectionMatrix();
+}
+
+
 
     // main animation loop - calls 50-60 times per second.
     let mainLoop = function() {
+
+
+
+
       // triangle1.faces[0].position.x+=10;
       // triangle1.rotation.z+=0.02;
      // triangle1.rotation.y+=0.02;
@@ -745,6 +780,3 @@ $(function () {
     });
 
 });
-
-
-
