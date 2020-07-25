@@ -1,3 +1,17 @@
+$(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    });
+});
+
+
 $('.burger, .overlay').click(function(){
   $('.burger').toggleClass('clicked');
   $('.overlay').toggleClass('show');
@@ -37,9 +51,6 @@ var delay = ( function() {
           "-=0.2"
         );
 
-      document.querySelector(".btn").addEventListener("click", () => {
-        tl.reversed() ? tl.play() : tl.reverse();
-      });
 
 
 
