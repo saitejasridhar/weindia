@@ -406,6 +406,7 @@ body {
 }
 
 .l-heading {
+  margin-right: 15%;
   font-size: 4rem;
   line-height: 4.4rem;
 }
@@ -425,18 +426,19 @@ a {
 
 .btn {
   text-align: center;
+
   display: inline-block;
   padding: 0.7rem 1.2rem;
   color: #000;
   background: rgb(245,189,69);
   border: none;
   border-radius: 0.3rem;
-  margin-left: 45%
+  margin-left: 35%
 }
 
 
 main {
-  width: 40%;
+  width: 30%;
   padding-left: 0rem;
   height: 100vh;
   display: flex;
