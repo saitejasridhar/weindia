@@ -45,7 +45,7 @@ function InitialiseScene() {
   WIDTH = window.innerWidth;
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x1b232e);
+  scene.background = new THREE.Color(0x12202b);
   aspectRatio = WIDTH / HEIGHT;
   fieldOfView = 60;
   nearPlane = 1;
